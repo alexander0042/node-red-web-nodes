@@ -66,10 +66,10 @@ module.exports = function(RED) {
 
         if (typeof(node.lang) == 'undefined') { node.lang = 'en'; }
         if (node.year && node.month && node.day && node.hours && node.minutes) {
-            url = ("https://api.darksky.net/forecast/" + node.apikey + "/" + node.lat + "," + node.lon + "," + node.year + "-" + node.month + "-" + node.day + "T" + node.hours + ":" + node.minutes + ":00?units=" + node.units + "&lang=" + node.lang);
+            url = ("https://api.pirateweather.net/forecast/" + node.apikey + "/" + node.lat + "," + node.lon + "," + node.year + "-" + node.month + "-" + node.day + "T" + node.hours + ":" + node.minutes + ":00?units=" + node.units + "&lang=" + node.lang);
             when = 0;
         } else if (node.lat && node.lon && node.apikey) {
-            url = ("https://api.darksky.net/forecast/" + node.apikey + "/" + node.lat + "," + node.lon + "?units=" + node.units + "&lang=" + node.lang);
+            url = ("https://api.pirateweather.net/forecast/" + node.apikey + "/" + node.lat + "," + node.lon + "?units=" + node.units + "&lang=" + node.lang);
             when = 1;
         }
         //If the URL is not initialised, there has been an error with the input data,
